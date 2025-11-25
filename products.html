@@ -37,6 +37,17 @@
         .nav-links a:hover {
             color: #d1d8e0;
         }
+        .cart-counter {
+            background: #fff;
+            color: #173265;
+            border-radius: 50%;
+            padding: 4px 12px;
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-left: 13px;
+            border: 2px solid #79c2f2;
+            vertical-align: middle;
+        }
         header {
             background: #173265;
             color: #fff;
@@ -58,6 +69,7 @@
             padding: 24px;
             text-align: center;
             transition: transform 0.2s;
+            position: relative;
         }
         .product:hover {
             transform: translateY(-7px) scale(1.028);
@@ -75,6 +87,26 @@
             font-size: 1.14em;
             color: #236c4c;
         }
+        .product .cart-btn {
+            margin-top: 18px;
+            padding: 10px 20px;
+            background: #173265;
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+        .product .cart-btn:active {
+            background: #217974;
+        }
+        .added-msg {
+            color: #48a748;
+            font-size: 0.95em;
+            padding-top: 6px;
+        }
         .btn {
             margin: 55px 0 32px 0;
             padding: 15px 36px;
@@ -86,8 +118,10 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        .btn:hover {
-            background: #4168e1;
+        .btn:disabled {
+            background: #a0a7b3;
+            color: #fff;
+            cursor: not-allowed;
         }
         .brands-row {
             display: flex;
@@ -121,6 +155,7 @@
             <a href="products.html">Products</a>
             <a href="payments.html">Payments</a>
             <a href="thankyou.html">Thank You</a>
+            <span>🛒<span class="cart-counter" id="cartCounter">0</span></span>
         </div>
     </div>
     <header>
@@ -142,45 +177,83 @@
             <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=400&q=80" alt="Adidas T-shirt">
             <h3>Adidas T-shirt</h3>
             <p>₹1800<br>Classic styles for everyday comfort</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
         <div class="product">
             <img src="https://images.unsplash.com/photo-1469398715555-76331a9b47b6?auto=format&fit=crop&w=400&q=80" alt="Nike Hoodie">
             <h3>Nike Hoodie</h3>
             <p>₹3200<br>Premium fleece, athletic fit</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
         <div class="product">
             <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=400&q=80" alt="Puma Sneakers">
             <h3>Puma Sneakers</h3>
             <p>₹4200<br>Run in style. Cushioned soles.</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
         <div class="product">
             <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Levi’s Jeans">
             <h3>Levi’s Jeans</h3>
             <p>₹2200<br>Modern fit, indigo blue, stretchable</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
         <div class="product">
             <img src="https://images.unsplash.com/photo-1618354691321-241386ff2538?auto=format&fit=crop&w=400&q=80" alt="H&M Dress">
             <h3>H&M Summer Dress</h3>
             <p>₹2500<br>Floral, breezy, made from organic cotton</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
         <div class="product">
             <img src="https://images.unsplash.com/photo-1574180045827-681f8a1a9622?auto=format&fit=crop&w=400&q=80" alt="Adidas Shorts">
             <h3>Adidas Sports Shorts</h3>
             <p>₹1200<br>Breathable, perfect for workouts</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
         <div class="product">
             <img src="https://images.unsplash.com/photo-1551727978-bfa813c2c707?auto=format&fit=crop&w=400&q=80" alt="Nike Cap">
             <h3>Nike Cap</h3>
             <p>₹900<br>Summer cool, adjustable, 100% original</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
         <div class="product">
             <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Puma Tracksuit">
             <h3>Puma Tracksuit</h3>
             <p>₹4100<br>All-weather. Signature stripes.</p>
+            <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            <div class="added-msg" style="display:none;">Added to Cart!</div>
         </div>
     </main>
     <div style="text-align:center;">
-        <button class="btn" onclick="window.location.href='payments.html'">Proceed to Payment</button>
+        <button class="btn" id="proceedPayment" onclick="goToPay()">Proceed to Payment (Cart: <span id='btnCartCount'>0</span>)</button>
     </div>
+    <script>
+        let cartCount = 0;
+        function addToCart(btn) {
+            cartCount++;
+            document.getElementById('cartCounter').innerText = cartCount;
+            document.getElementById('btnCartCount').innerText = cartCount;
+            btn.disabled = true;
+            let addedMsg = btn.nextElementSibling;
+            addedMsg.style.display = 'block';
+            setTimeout(() => { addedMsg.style.display = 'none'; }, 1000);
+            updatePaymentBtn();
+        }
+        function updatePaymentBtn() {
+            let payBtn = document.getElementById('proceedPayment');
+            payBtn.disabled = cartCount === 0;
+        }
+        function goToPay() {
+            if(cartCount > 0) { window.location.href='payments.html'; }
+        }
+        // Initial state
+        updatePaymentBtn();
+    </script>
 </body>
 </html>
