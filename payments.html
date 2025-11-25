@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payments – Branded Clothes Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(110deg, #ffecd2, #fcb69f);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2d3e50;
+            color: #fff;
+            padding: 17px 28px;
+        }
+        .navbar h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #d1d8e0;
+        }
+        header {
+            background: #2d3e50;
+            color: #fff;
+            padding: 20px 0 13px 0;
+            text-align: center;
+        }
+        .payment-container {
+            max-width: 480px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.13);
+            padding: 34px 42px 40px 42px;
+            text-align: left;
+        }
+        h2 {
+            color: #173265;
+        }
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: #273352;
+            font-weight: 600;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1.07em;
+            background: #f7fafc;
+        }
+        .btn {
+            margin-top: 27px;
+            padding: 13px 38px;
+            background: #173265;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.17em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #fa9372;
+        }
+        .pay-img {
+            display: block;
+            margin: 0 auto 22px auto;
+            width: 92px;
+        }
+        .payment-info {
+            padding: 12px 0;
+            color: #40494f;
+        }
+        .secure {
+            color: #389e0d;
+            font-size: 1.08em;
+            font-weight: bold;
+        }
+        .accepted-cards {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            margin-bottom: 18px;
+        }
+        .accepted-cards img {
+            width: 43px;
+        }
+        @media (max-width: 700px) {
+            .payment-container {padding: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Branded Clothes</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="payments.html">Payments</a>
+            <a href="thankyou.html">Thank You</a>
+        </div>
+    </div>
+    <header>
+        <h1>Payments</h1>
+        <p>100% Secure Online Payments</p>
+    </header>
+    <div class="payment-container">
+        <img class="pay-img" src="https://cdn-icons-png.flaticon.com/512/2920/2920481.png" alt="Payment Image">
+        <h2>Enter Payment Details</h2>
+        <div class="payment-info">
+            <span class="secure">SSL Secured | Guaranteed Safe Checkout</span>
+            <div class="accepted-cards">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png" alt="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Mastercard-logo.png" alt="Mastercard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Logo_American_Express.png" alt="Amex">
+            </div>
+        </div>
+        <form onsubmit="event.preventDefault(); window.location.href='thankyou.html';">
+            <label for="name">Cardholder Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="card">Card Number</label>
+            <input type="number" id="card" name="card" placeholder="1234 5678 9012 3456" required>
+
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" name="cvv" placeholder="123" required>
+            
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+        <div class="payment-info">
+            Have a promo code? <input style="border:1px solid #ccc; border-radius:6px; padding:2px 8px; width:100px;" type="text" placeholder="Enter Code">
+        </div>
+    </div>
+</body>
+</html>
