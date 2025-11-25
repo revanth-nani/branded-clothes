@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You – Branded Clothes Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(110deg, #d9afd9, #97d9e1);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2d3e50;
+            color: #fff;
+            padding: 18px 28px;
+        }
+        .navbar h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #d1d8e0;
+        }
+        .thankyou-container {
+            margin: 90px auto 0 auto;
+            background: #fff;
+            padding: 56px 35px 44px 35px;
+            border-radius: 22px;
+            box-shadow: 0 6px 34px rgba(0,0,0,0.15);
+            max-width: 430px;
+        }
+        .thx-img {
+            width: 85px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            color: #173265;
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.14em;
+            color: #594272;
+            line-height: 1.5em;
+        }
+        .btn {
+            margin-top: 32px;
+            padding: 13px 38px;
+            background: #173265;
+            color: #fff;
+            border: none;
+            border-radius: 9px;
+            font-size: 1.20em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #7d5fff;
+        }
+        .order-info {
+            margin-top: 18px;
+            color: #3a2868;
+            font-size: 1.08em;
+            background: #eca2fc18;
+            border-radius: 8px;
+            padding: 10px 8px;
+        }
+        .social {
+            display: flex; gap: 24px; justify-content: center; margin-top: 32px;
+        }
+        .social a img {
+            width: 38px; border-radius: 50%;
+        }
+        @media (max-width: 600px) {
+            .thankyou-container { width:92vw;padding:12vw 2vw;}
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Branded Clothes</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="payments.html">Payments</a>
+            <a href="thankyou.html">Thank You</a>
+        </div>
+    </div>
+    <div class="thankyou-container">
+        <img class="thx-img" src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Thank you icon">
+        <h2>Thank You for Your Purchase!</h2>
+        <p>Your branded clothes are on their way.<br>We appreciate your trust in us for authentic, stylish brands. You’ll receive your order confirmation and tracking details on your email soon.</p>
+        <div class="order-info">
+            Order No: #BCB<span id="order">202511</span> <br>
+            Need help? <a href="mailto:support@brandedclotheshub.in">Contact Support</a>
+        </div>
+        <button class="btn" onclick="window.location.href='index.html'">Shop More</button>
+        <div class="social">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook"></a>
+        </div>
+    </div>
+</body>
+</html>
