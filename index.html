@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Branded Clothes Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f3c680, #a1c4fd);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2d3e50;
+            color: #fff;
+            padding: 18px 28px;
+        }
+        .navbar h2 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #d1d8e0;
+        }
+        .hero-section {
+            margin: 60px 0 30px 0;
+        }
+        .hero-img {
+            width: 68vw;
+            max-width: 600px;
+            border-radius: 16px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.16);
+        }
+        .branding {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #173265;
+            letter-spacing: 1.5px;
+            margin: 30px 0 20px 0;
+        }
+        .btn {
+            margin-top: 50px;
+            padding: 18px 44px;
+            background: #173265;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.4em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #5168ff;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 35px auto 48px auto;
+            max-width: 970px;
+        }
+        .feature {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            padding: 28px 22px;
+            width: 23%;
+            min-width: 210px;
+        }
+        .feature-icon {
+            font-size: 2.8em;
+            margin-bottom: 8px;
+        }
+        .feature-title {
+            font-weight: 700;
+            color: #2d3e50;
+            margin: 9px 0;
+        }
+        .testimonial-section {
+            background: #f4e2d8;
+            padding: 40px 0;
+        }
+        .testimonial-title {
+            color: #3a2868;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        .testimonial-list {
+            display: flex;
+            gap: 26px;
+            justify-content: center;
+            margin-top: 14px;
+        }
+        .testimonial {
+            background: #fff;
+            padding: 24px 22px;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            max-width: 310px;
+        }
+        .testimonial-user {
+            font-size: 1em;
+            color: #173265;
+            margin-top: 18px;
+            font-weight: bold;
+        }
+        @media (max-width: 900px) {
+            .features, .testimonial-list { flex-direction: column; gap: 24px;}
+            .feature, .testimonial { width: 80%; margin: 0 auto;}
+            .hero-img { width: 80vw;}
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Branded Clothes</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="payments.html">Payments</a>
+            <a href="thankyou.html">Thank You</a>
+        </div>
+    </div>
+    <section class="hero-section">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Branded clothes">
+        <div class="branding">
+            100% Genuine. 100% Branded. 100% You.
+        </div>
+        <p>Welcome to the world of original style – shop from the biggest brands, at the best prices!</p>
+        <button class="btn" onclick="window.location.href='products.html'">Shop Now</button>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <div class="feature-icon">🛍️</div>
+            <div class="feature-title">Wide Range</div>
+            <div>All top brands under one roof for men, women, and kids.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">✅</div>
+            <div class="feature-title">Guaranteed Authentic</div>
+            <div>Buy only original products with verified authenticity.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">⭐</div>
+            <div class="feature-title">Premium Quality</div>
+            <div>Experience the comfort & style of genuine branded wear.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🚚</div>
+            <div class="feature-title">Express Delivery</div>
+            <div>Fast, reliable, and tracked delivery to your doorstep.</div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="testimonial-title">What Our Customers Say</div>
+        <div class="testimonial-list">
+            <div class="testimonial">
+                “Fantastic range and every item is authentic. I love shopping here!”
+                <div class="testimonial-user">– Priya S.</div>
+            </div>
+            <div class="testimonial">
+                “The quality and brand assurance keeps me coming back.”
+                <div class="testimonial-user">– Rohan K.</div>
+            </div>
+            <div class="testimonial">
+                “Quick delivery and customer care is excellent!”
+                <div class="testimonial-user">– Sneha M.</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
