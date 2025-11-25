@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Brands – Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(100deg, #a8ff78, #78ffd6);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #173265;
+            color: #fff;
+            padding: 17px 28px;
+        }
+        .navbar h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #d1d8e0;
+        }
+        header {
+            background: #173265;
+            color: #fff;
+            padding: 20px 0 10px 0;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 34px;
+            max-width: 1080px;
+            margin: 48px auto 20px auto;
+            padding: 0 18px;
+        }
+        .product {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: translateY(-7px) scale(1.028);
+        }
+        .product img {
+            width: 100%;
+            max-width: 160px;
+            border-radius: 10px;
+        }
+        .product h3 {
+            margin: 20px 0 8px 0;
+            color: #173265;
+        }
+        .product p {
+            font-size: 1.14em;
+            color: #236c4c;
+        }
+        .btn {
+            margin: 55px 0 32px 0;
+            padding: 15px 36px;
+            background: #173265;
+            color: #fff;
+            border: none;
+            border-radius: 9px;
+            font-size: 1.18em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #4168e1;
+        }
+        .brands-row {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-bottom: 34px;
+        }
+        .brand-logo {
+            width: 75px; height: 45px; object-fit: contain; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            padding: 5px;
+            margin-top: 10px;
+        }
+        .about-products {
+            text-align: center;
+            font-size: 1.19em;
+            color: #3b5056;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 850px) {
+            .brands-row { flex-direction: column; align-items: center; gap: 12px;}
+            .product-grid { grid-template-columns: 1fr;}
+            .brand-logo { width: 120px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Branded Clothes</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="payments.html">Payments</a>
+            <a href="thankyou.html">Thank You</a>
+        </div>
+    </div>
+    <header>
+        <h1>Our Top Brands</h1>
+        <p>Authentic clothing from the world’s best labels</p>
+    </header>
+    <div class="brands-row">
+        <img class="brand-logo" src="https://1000logos.net/wp-content/uploads/2017/03/Adidas-logo.png" alt="Adidas">
+        <img class="brand-logo" src="https://1000logos.net/wp-content/uploads/2017/03/Nike-Logo.png" alt="Nike">
+        <img class="brand-logo" src="https://1000logos.net/wp-content/uploads/2017/03/Puma-logo.png" alt="Puma">
+        <img class="brand-logo" src="https://1000logos.net/wp-content/uploads/2017/03/Levis-logo.png" alt="Levi's">
+        <img class="brand-logo" src="https://1000logos.net/wp-content/uploads/2017/03/HM-Logo.png" alt="H&M">
+    </div>
+    <div class="about-products">
+        Explore our carefully curated collection. Every item is sourced directly from the brands themselves for your complete peace of mind!
+    </div>
+    <main class="product-grid">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=400&q=80" alt="Adidas T-shirt">
+            <h3>Adidas T-shirt</h3>
+            <p>₹1800<br>Classic styles for everyday comfort</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1469398715555-76331a9b47b6?auto=format&fit=crop&w=400&q=80" alt="Nike Hoodie">
+            <h3>Nike Hoodie</h3>
+            <p>₹3200<br>Premium fleece, athletic fit</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=400&q=80" alt="Puma Sneakers">
+            <h3>Puma Sneakers</h3>
+            <p>₹4200<br>Run in style. Cushioned soles.</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Levi’s Jeans">
+            <h3>Levi’s Jeans</h3>
+            <p>₹2200<br>Modern fit, indigo blue, stretchable</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1618354691321-241386ff2538?auto=format&fit=crop&w=400&q=80" alt="H&M Dress">
+            <h3>H&M Summer Dress</h3>
+            <p>₹2500<br>Floral, breezy, made from organic cotton</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1574180045827-681f8a1a9622?auto=format&fit=crop&w=400&q=80" alt="Adidas Shorts">
+            <h3>Adidas Sports Shorts</h3>
+            <p>₹1200<br>Breathable, perfect for workouts</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1551727978-bfa813c2c707?auto=format&fit=crop&w=400&q=80" alt="Nike Cap">
+            <h3>Nike Cap</h3>
+            <p>₹900<br>Summer cool, adjustable, 100% original</p>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Puma Tracksuit">
+            <h3>Puma Tracksuit</h3>
+            <p>₹4100<br>All-weather. Signature stripes.</p>
+        </div>
+    </main>
+    <div style="text-align:center;">
+        <button class="btn" onclick="window.location.href='payments.html'">Proceed to Payment</button>
+    </div>
+</body>
+</html>
